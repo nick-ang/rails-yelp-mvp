@@ -1,0 +1,10 @@
+<h1>index</h1>
+
+<!-- app/views/restaurants/index.html.erb -->
+<ul>
+  <% @restaurants.each do |restaurant| %>
+    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a New restaurant", new_restaurant_path %>
